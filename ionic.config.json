@@ -1,0 +1,7 @@
+{
+  "name": "movieDb",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

@@ -1,0 +1,44 @@
+.welcome-card ion-img {
+  max-height: 35vh;
+  overflow: hidden;
+}
+
+.center{
+  text-align:center;
+}
+
+.img1 {
+  width: 200px;
+  margin: auto;
+}
+
+.subtitle {
+  color: goldenrod;
+  border-bottom: 1px solid grey;
+  padding-bottom: 10px;
+}
+
+.subtitle .grey {
+  color: grey;
+}
+
+button {
+  color: black;
+  background-color: goldenrod;
+  border-radius: 5px;
+  margin-left: 10px;
+  height: 25px;
+}
+
+.content {
+  color: red;
+}
+
+.footer {
+  margin-top: 100px;
+  margin-bottom: 20px;
+  text-align:center;
+  color: rgb(100, 100, 100);
+  font-size: 14px;
+}
+

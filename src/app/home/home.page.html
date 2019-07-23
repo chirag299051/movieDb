@@ -1,0 +1,71 @@
+<ion-header>
+  <ion-toolbar color="medium">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title color="primary">
+      Movie Db
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content color="dark">
+  <ion-card color="warning">
+    <ion-card-header>
+      <ion-card-title color="primary">Welcome to the Movie Database app.</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content color="warning">
+      <p style="color: warning">Search all the information about your favourite movies and TV shows.</p>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-segment>
+    <ion-searchbar [(ngModel)]="name" (keyup.enter)="search()" color="medium"></ion-searchbar>
+    <ion-button (click)="search()" color="primary" right>
+      <ion-icon name="search"></ion-icon>
+    </ion-button>
+  </ion-segment>
+
+  <ion-card color="dark">
+    <ion-card-content>
+      <img class="img1" src={{src}}>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card color="medium" *ngIf="this.data && this.error==false">
+    <ion-card-header>
+      <ion-card-title class="center">{{title}} &nbsp;&nbsp;&nbsp;&nbsp;
+        <ion-icon name="star" color="warning"></ion-icon>
+        <span>{{rating}}</span>
+        <button ion-button (click)="imdb()" color="warning" size="small">
+          <b>IMDb</b></button>
+        <!-- <button type="button" class="btn btn-warning">Warning</button> -->
+      </ion-card-title>
+      <ion-card-subtitle class="center">
+        <p class="subtitle">{{genre}} &nbsp; <span class="grey">|</span> &nbsp; {{type}} ({{year}}) &nbsp; <span
+            class="grey">|</span> &nbsp; {{time}}</p>
+      </ion-card-subtitle>
+    </ion-card-header>
+
+    <ion-card-content>
+      <span class="content"><b>Plot :</b></span> {{plot}}<br>
+      <span class="content"><b>Director :</b></span> {{director}}<br>
+      <span class="content"><b>Writer :</b></span> {{writer}}<br>
+      <span class="content"><b>Actors :</b></span> {{actors}}<br>
+      <span class="content"><b>Released :</b></span> {{released}}<br>
+      <span class="content"><b>Country :</b></span> {{country}}<br>
+      <span class="content"><b>Awards :</b></span> {{awards}}<br>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card color="dark" *ngIf="this.error == true">
+      <ion-card-content>
+        <img src="./assets/404.jpg">
+      </ion-card-content>
+    </ion-card>
+
+  <footer class="footer">Copyright © 2019 - Chirag</footer>
+
+</ion-content>
+
